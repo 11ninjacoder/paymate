@@ -1,0 +1,20 @@
+.form-div {
+    background-color: #CCCCFC;
+}
+body {
+    background-color: grey;
+}
+.signup-header {
+    color: grey;
+    text-align: left;
+    font-weight: bold;
+    font-size: 24px;
+    background-color:white;
+    
+}
+.container {
+    max-width: 100% !important;
+}
+.help-block {
+    color: red;
+}
