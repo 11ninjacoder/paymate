@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Routing\Redirector;
 use Validator; 
+use Hash;
+use Auth;
 
 
 
@@ -39,7 +42,7 @@ class SignupController extends Controller {
       //Retrieve the name input field
       $name = $request->input('name');
       $email = $request->input('email');
-      $pass = $request->input('password');
+      $pass = Hash::make($request->input('password'));
       
       $id = DB::table('users')->insertGetId(
             ['name' => $name, 'email' => $email,  'password' => $pass]
@@ -73,23 +76,13 @@ class SignupController extends Controller {
                 'password' => $pass
         );
         // attempt to do the login
-       print_r($userdata);
+       
         if (Auth::attempt($userdata))
                 {
-               echo "Pass";die();
-                // validation successful
-                // do whatever you want on success
-                return view('dashboard',['name'=>$name]);
+                  return view('/dashboard');
                 }
-          else
-                {
-               echo "Failed";die();
-                // validation not successful, send back to form
-
-                  return redirect('/login')
-                        ->withErrors($errors)
-                        ->withInput();
-                }
+               return redirect()->route('/login', ['msg' => 'Invalid email address or password']);
+        //return view('/login',['msg'=>'Invalid email address or password']);
       
       
    }

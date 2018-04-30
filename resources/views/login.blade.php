@@ -5,6 +5,11 @@
 @section('content')
 <link href="{{ asset('css/sing_up.css') }}" rel="stylesheet">
 <div class="row signup-header"><div class="col-md-4">Paymate</div><div class="col-md-4"></div><div class="col-md-4 text-right"><div class="header-link"><a href="/signup">Sign Up</a> <a href="/login">log In</a></div></div></div>
+@if (!empty($msg))
+<div class="row alert alert-danger">
+    <strong>Error!</strong>&nbsp;<?=$msg?>.
+</div>
+@endif
 <div class="row mt-5">
         <div class="col-md-4"></div>
         <div class="col-md-4 form-div">
