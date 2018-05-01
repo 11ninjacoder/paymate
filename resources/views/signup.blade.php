@@ -16,7 +16,7 @@
                 <div class="panel-heading text-center font-weight-bold">Sign Up</div>
                 
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/signup-success') }}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/signup') }}">
                         {!! csrf_field() !!}
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">

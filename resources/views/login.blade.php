@@ -17,7 +17,7 @@
                 <div class="panel-heading text-center font-weight-bold">Login</div>
                 
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/login-success') }}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
                         {!! csrf_field() !!}
 
                         

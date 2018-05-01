@@ -28,11 +28,11 @@ Route::get('/Registration','RegistrationController@index');
 
 //Signup
 Route::get('/signup','SignupController@index');
-Route::post('/signup-success','SignupController@signupCreate');
+Route::post('/signup','SignupController@signupCreate');
 
 //Login
 Route::get('/login', function () {
     return view('login');
 });
-Route::post('/login-success','SignupController@loginCheck');
+Route::post('/login','SignupController@loginCheck');
 

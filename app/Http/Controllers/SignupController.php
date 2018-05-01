@@ -79,10 +79,11 @@ class SignupController extends Controller {
        
         if (Auth::attempt($userdata))
                 {
-                  return view('/dashboard');
+                  $user = auth()->user();
+                  return view('/dashboard')->with('user', $user);
+                  //return view('/dashboard');
                 }
-               return redirect()->route('/login', ['msg' => 'Invalid email address or password']);
-        //return view('/login',['msg'=>'Invalid email address or password']);
+        return view('/login',['msg'=>'Invalid email address or password']);
       
       
    }
