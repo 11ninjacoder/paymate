@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Routing\Redirector;
+//use Illuminate\Routing\Redirector;
 use Validator; 
 use Hash;
 use Auth;
+use Session;
 
 
 
@@ -80,13 +81,21 @@ class SignupController extends Controller {
         if (Auth::attempt($userdata))
                 {
                   $user = auth()->user();
-                  return view('/dashboard')->with('user', $user);
-                  //return view('/dashboard');
+                  Session::put('name', $user->name);
+                  Session::put('userId', $user->id);
+                  //return view('/dashboard')->with('user', $user);
+                  return redirect('/dashboard');
+                  
                 }
         return view('/login',['msg'=>'Invalid email address or password']);
       
       
    }
+   
+   public function logout(){
+        Session::flush(); 
+        return redirect('/login');   
+    }
     
 
 }

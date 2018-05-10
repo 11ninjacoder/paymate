@@ -19,10 +19,6 @@ Route::get('/register', function () {
     return view('register');
 });
 
-// Second Route method – Root URL with ID will match this method
-Route::get('ID/{id}',function($id){
-   echo 'ID: '.$id;
-});
 
 Route::get('/Registration','RegistrationController@index');
 
@@ -35,4 +31,14 @@ Route::get('/login', function () {
     return view('login');
 });
 Route::post('/login','SignupController@loginCheck');
+
+//Logout 
+Route::get('/logout','SignupController@logout');
+
+
+
+//User Dashboard
+Route::get('/dashboard','UserController@index');
+
+
 

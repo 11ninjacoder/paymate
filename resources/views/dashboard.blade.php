@@ -2,7 +2,7 @@
 @section('title', 'Dashboard')
 @section('content')   
 <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
-<div class="row signup-header"><div class="col-md-4">Paymate</div><div class="col-md-4"></div><div class="col-md-4 text-right"><div class="header-link"><a href="/signup">Log Out</a></div></div></div>
+<div class="row signup-header"><div class="col-md-4">Paymate</div><div class="col-md-4"></div><div class="col-md-4 text-right"><div class="header-link"><a href="/logout">Log Out</a></div></div></div>
 
     <div class="row profile">
             <div class="col-md-3 profile-menu">
@@ -22,8 +22,8 @@
                             <!-- SIDEBAR USER TITLE -->
                             <div class="profile-usertitle">
                                     <div class="profile-usertitle-name text-capitalize mark">
-                                            @if (!empty($user))
-                                                   <?=$user->name?>
+                                            @if (Session::has('name'))
+                                              <?=Session::get('name')?>
                                             @endif
                                     </div>
                             </div>
