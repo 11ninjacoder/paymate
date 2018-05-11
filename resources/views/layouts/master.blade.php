@@ -1,24 +1,21 @@
+<!doctype html>
 <html>
-   
-   <head>
-      <title>@yield('title')</title>
-      <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+<head>
+    @include('includes.head')
+</head>
+<body>
+<div class="container">
 
-   </head>
-   
-   <body>
-      @section('sidebar')
-      
-      @show
-      
-      <div class = "container">
-         @yield('content')
-      </div>
-   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <header class="row signup-header">
+        @include('includes.header')
+    </header>
+
+    @yield('content')
     
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-   </body>
-   
+    <footer class=" footer">
+        @include('includes.footer')
+    </footer>
+
+</div>
+</body>
 </html>
