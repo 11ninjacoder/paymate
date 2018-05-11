@@ -30,10 +30,6 @@ body {
 .profile {
   margin: 20px 0;
 }
-.profile-menu {
-    min-height: 460px;
-    background: #fff;
-}
 /* Profile sidebar */
 .profile-sidebar {
   padding: 10px 0 0 0;
@@ -94,16 +90,28 @@ body {
 
 /* Profile Content */
 .profile-content {
-  padding: 20px;
-  background: #fff;
-  min-height: 460px;
+  min-height: 600px;
 }
 .footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: white;
-    color: black;
+    background-color: #1f4267;
+    color: white;
     text-align: center;
+}
+#sidebar {
+    background-color: black;
+    color: white;
+    
+}
+#content {
+    background-color: lightskyblue;
+    
+}
+.img-responsive {
+    width: 100px;
+    border-radius: 50%;
+    
 }

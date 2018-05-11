@@ -16,7 +16,25 @@
         
     </header>
 
-    @yield('content')
+        @if (!(Session::has('userId')))
+               @yield('content')
+               
+        @elseif ((Session::has('userId')))
+               <div id="main" class="row">
+
+                <!-- sidebar content -->
+                <div id="sidebar" class="col-md-3 profile-menu">
+                    @include('includes.sidebar')
+                </div>
+
+                <!-- main content -->
+                <div id="content" class="col-md-9">
+                    @yield('content')
+                </div>
+
+            </div>
+        @endif
+    
     
     <footer class="footer">
         @include('includes.footer')
