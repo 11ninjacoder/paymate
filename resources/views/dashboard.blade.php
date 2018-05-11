@@ -1,10 +1,7 @@
 @extends('layouts.master')
 @section('title', 'Dashboard')
 @section('content')   
-<link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
-<div class="row signup-header"><div class="col-md-4">Paymate</div><div class="col-md-4"></div><div class="col-md-4 text-right"><div class="header-link"><a href="/logout">Log Out</a></div></div></div>
-
-    <div class="row profile">
+<div class="row profile">
             <div class="col-md-3 profile-menu">
                 
                         <div class="col-md-12 profile-userpic">

@@ -7,12 +7,18 @@
 <div class="container">
 
     <header class="row signup-header">
-        @include('includes.header')
+        @if (!(Session::has('userId')))
+               @include('includes.header')
+        @elseif ((Session::has('userId')))
+               @include('includes.dashboard_header')
+        @endif
+        
+        
     </header>
 
     @yield('content')
     
-    <footer class=" footer">
+    <footer class="footer">
         @include('includes.footer')
     </footer>
 
