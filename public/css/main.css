@@ -1,15 +1,10 @@
-.form-div {
-    background-color: #CCCCFC;
-}
-body {
-    background-color: grey;
-}
+
 .signup-header {
-    color: grey;
+    color: white;
     text-align: left;
     font-weight: bold;
     font-size: 24px;
-    background-color:white;
+    background-color:#1f4267;
     
 }
 .container {
@@ -22,16 +17,24 @@ body {
     margin-top: 10px;
 }
 .header-link > a{
-    color:black;
+    color:white;
     font-size:14px;
+    
 }
 .footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: white;
-    color: black;
+    background-color: #1f4267;
+    color: white;
     text-align: center;
+}
+.form-div {
+    border: 1px solid grey;
+    
+}
+.form-div .panel-heading {
+    margin-top:20px;
 }
 

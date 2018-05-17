@@ -26,7 +26,7 @@
                             <div class="profile-usermenu">
                                     <ul class="nav navbar-nav">
                                             <li>
-                                                    <a href="#">
+                                                    <a href="/addVideo">
                                                     <i class="glyphicon glyphicon-user"></i>
                                                     Add Video </a>
                                             </li>

@@ -1,15 +1,9 @@
-.form-div {
-    background-color: #CCCCFC;
-}
-body {
-    background-color: #F1F3FA;
-}
 .signup-header {
-    color: grey;
+    color: white;
     text-align: left;
     font-weight: bold;
     font-size: 24px;
-    background-color:white;
+    background-color:#1f4267;
     
 }
 .container {
@@ -21,7 +15,7 @@ body {
     margin-top: 10px;
 }
 .header-link > a{
-    color:red;
+    color:white;
     font-size:14px;
     
 }
@@ -29,6 +23,9 @@ body {
 /* Profile container */
 .profile {
   margin: 20px 0;
+}
+#sidebar {
+ min-height: 768px;    
 }
 /* Profile sidebar */
 .profile-sidebar {
@@ -67,9 +64,9 @@ body {
 }
 
 .profile-usermenu ul li a {
-  color: #93a3b5;
   font-size: 14px;
   font-weight: 400;
+  color: white;
 }
 
 .profile-usermenu ul li a i {
@@ -78,20 +75,12 @@ body {
 }
 
 .profile-usermenu ul li a:hover {
-  background-color: #fafcfd;
-  color: #5b9bd1;
-}
-
-.profile-usermenu ul li.active {
-  border-bottom: none;
+  background-color: yellow;
+  color: green
+  
 }
 
 
-
-/* Profile Content */
-.profile-content {
-  min-height: 600px;
-}
 .footer {
     position: fixed;
     left: 0;
@@ -106,12 +95,18 @@ body {
     color: white;
     
 }
-#content {
-    background-color: lightskyblue;
-    
-}
 .img-responsive {
     width: 100px;
     border-radius: 50%;
+    
+}
+.form-wrap {
+    border: 1px solid #ced4da;
+    margin-top:30px;
+    padding:20px;
+    
+}
+.form-wrap .panel-heading {
+    margin-top:20px;
     
 }

@@ -21,6 +21,15 @@ class UserController extends Controller {
         
     }
     
+    public function addVideo(){
+        if (!(Session::has('userId'))){
+            return redirect('/login');
+        }else{
+             return view('/addVideo');     
+        }
+        
+    }
+    
     
     
 

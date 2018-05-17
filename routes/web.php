@@ -40,5 +40,8 @@ Route::get('/logout','SignupController@logout');
 //User Dashboard
 Route::get('/dashboard','UserController@index');
 
+//Add Video
+Route::get('/addVideo','UserController@addVideo');
+
 
 
