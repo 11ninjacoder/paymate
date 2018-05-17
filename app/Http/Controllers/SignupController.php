@@ -46,7 +46,7 @@ class SignupController extends Controller {
       $pass = Hash::make($request->input('password'));
       
       $id = DB::table('users')->insertGetId(
-            ['name' => $name, 'email' => $email,  'password' => $pass]
+            ['name' => $name, 'email' => $email,  'password' => $pass, 'creation_date'=>date("Y-m-d H:i:s")]
       );
       return view('/signup',['msg'=>'Registration Successfully!']);
    }

@@ -43,5 +43,8 @@ Route::get('/dashboard','UserController@index');
 //Add Video
 Route::get('/addVideo','UserController@addVideo');
 
+//Add Video
+Route::post('/addVideo','UserController@addVideoValidate');
+
 
 

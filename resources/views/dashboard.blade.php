@@ -3,7 +3,7 @@
 @section('content')   
 <div class="profile">
     <div class="profile-content">
-           <div style="color: white">Welcome! </div>
+           <div>Dashboard</div>
     </div>
 </div>
 @endsection

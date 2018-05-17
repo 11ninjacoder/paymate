@@ -14,7 +14,7 @@
                             
                             <!-- SIDEBAR USER TITLE -->
                             <div class="profile-usertitle">
-                                    <div class="profile-usertitle-name text-capitalize mark">
+                                    <div class="profile-usertitle-name text-capitalize mark">Welcome!
                                             @if (Session::has('name'))
                                               <?=Session::get('name')?>
                                             @endif

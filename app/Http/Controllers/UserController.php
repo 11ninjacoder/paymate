@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Validator;
 use Session;
 
 class UserController extends Controller {
@@ -29,6 +32,35 @@ class UserController extends Controller {
         }
         
     }
+    
+    public function addVideoValidate(Request $request){
+        
+        
+        $errors = Validator::make($request->all(), [
+            'title' => 'required|min:6',
+            'url' => 'required|url',
+            'description' => 'required|min:20'
+            
+        ]);
+
+        if ($errors->fails()) {
+            return redirect('/addVideo')
+                        ->withErrors($errors)
+                        ->withInput();
+        }
+      //Retrieve the input field
+      $title = $request->input('title');
+      $url = $request->input('url');
+      $description = $request->input('description');
+      $creatorID = session('userId');
+      
+      
+      $id = DB::table('videos')->insertGetId(
+            ['title' => $title, 'url' => $url, 'creator_id' => $creatorID, 'description'=>$description, 'creation_date' => date("Y-m-d H:i:s")]
+      );
+      return view('/addVideo',['msg'=>'Video added successfully!']);
+   }
+    
     
     
     

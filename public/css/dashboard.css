@@ -74,11 +74,6 @@
   font-size: 14px;
 }
 
-.profile-usermenu ul li a:hover {
-  background-color: yellow;
-  color: green
-  
-}
 
 
 .footer {
@@ -109,4 +104,7 @@
 .form-wrap .panel-heading {
     margin-top:20px;
     
+}
+.alert {
+    margin-top: 10px;
 }
