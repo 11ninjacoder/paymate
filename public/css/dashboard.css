@@ -108,3 +108,7 @@
 .alert {
     margin-top: 10px;
 }
+.btn-top-right {
+    padding: 10px;
+    text-align: right;
+}

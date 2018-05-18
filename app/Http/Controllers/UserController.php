@@ -19,7 +19,9 @@ class UserController extends Controller {
         if (!(Session::has('userId'))){
             return redirect('/login');
         }else{
-             return view('/dashboard');     
+             $videos = DB::table('videos')->get();
+             return view('dashboard', ['videos' => $videos]);
+             //return view('/dashboard');     
         }
         
     }

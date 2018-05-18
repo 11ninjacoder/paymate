@@ -5,8 +5,8 @@
 <div class="alert alert-success"><?=$msg?></div>
 @endif
 <div class="form-wrap">
-               
-                <div class="panel-heading text-center font-weight-bold">ADD VIDEO</div>
+    <div align="right"><button type="button"  onclick="window.location.href='/dashboard'" class="btn btn-danger">Cancel</button></div>
+                <div class="panel-heading text-center font-weight-bold">VIDEO</div>
                 
                 <div class="panel-body">
 <form  role="form" method="POST" action="{{ url('/addVideo') }}">
@@ -58,6 +58,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fa fa-btn fa-user"></i>Submit
                                 </button>
+                                <button type="button" onclick="window.location.href='/dashboard'" class="btn btn-danger">Cancel</button>
                             </div>
                         </div>
 </form>

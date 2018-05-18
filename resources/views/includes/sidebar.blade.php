@@ -31,6 +31,11 @@
                                                     Add Video </a>
                                             </li>
                                             <li>
+                                                    <a href="/dashboard">
+                                                    <i class="glyphicon glyphicon-user"></i>
+                                                    Video List </a>
+                                            </li>
+                                            <li>
                                                  
                                             </li>
                                             
