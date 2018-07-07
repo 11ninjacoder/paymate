@@ -25,7 +25,7 @@
                     <td><?= str_limit($video->title, 20, '...')?></td>
                     <td><?= str_limit($video->url, 50, '...')?></td>
                     <td><?= str_limit($video->description, 20, '...')?></td>
-                    <td><a href="/viewVideo">View&nbsp;</a><a href="/editVideo">Edit&nbsp;</a><a href="/deleteVideo">Delete&nbsp;</a></td>
+                    <td><a href="/viewVideo?id=<?=$video->id?>">View&nbsp;</a><a href="#">Edit&nbsp;</a><a href="#">Delete&nbsp;</a></td>
                 </tr>
             <?php } ?>
         </tbody>

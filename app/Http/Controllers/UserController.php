@@ -62,6 +62,24 @@ class UserController extends Controller {
       );
       return view('/addVideo',['msg'=>'Video added successfully!']);
    }
+   
+   public function viewVideo(Request $request){
+        
+        if (!(Session::has('userId'))){
+            return redirect('/login');
+        }else{
+             $id = $request->input('id'); 
+             if(trim($id)!=''){
+                 $videos = DB::table('videos')->where('id', $id)->first();
+                 return view('viewVideo', ['videos' => $videos]);
+               
+             }else{
+                 return redirect('/dashboard'); 
+             }
+             
+        }
+        
+    }
     
     
     
